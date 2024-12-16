@@ -1,5 +1,7 @@
 <div class="blog-item">
     <img *ngIf="post.cover_image" [src]="post.cover_image" alt="Cover Image" />
+    <img *ngIf="!post.cover_image" src="/assets/imgs/default_image.png" alt="Cover Image" />
+    <h4>{{post.type_of}}</h4>
     <h2>{{ post.title }}</h2>
     <p>By {{ post.user.name }} | {{ post.published_at | date }}</p>
 </div>

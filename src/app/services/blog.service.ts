@@ -10,6 +10,7 @@ export interface BlogPost {
   published_at: string;
   cover_image: string;
   url: string;
+  type_of: string;
 }
 
 @Injectable({
