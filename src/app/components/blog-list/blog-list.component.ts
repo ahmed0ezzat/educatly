@@ -9,15 +9,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-blog-list',
-  imports: [  NgIf, 
-              NgFor, 
-              LoadingIndicatorComponent, 
-              FontAwesomeModule, 
-              BlogItemComponent, 
-              ErrorMessageComponent, 
-              PaginationComponent
-            ],
-  providers: [ BlogService ],
+  imports: [NgIf,
+    NgFor,
+    LoadingIndicatorComponent,
+    FontAwesomeModule,
+    BlogItemComponent,
+    ErrorMessageComponent,
+    PaginationComponent
+  ],
+  providers: [BlogService],
   templateUrl: './blog-list.component.html',
   styleUrl: './blog-list.component.scss'
 })
@@ -29,7 +29,7 @@ export class BlogListComponent {
   pageSize = 6;
   faMagnifyingGlass = faMagnifyingGlass;
 
-  constructor(private blogService: BlogService) {}
+  constructor(private blogService: BlogService) { }
 
   ngOnInit() {
     this.fetchPosts();

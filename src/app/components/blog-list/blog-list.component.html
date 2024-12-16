@@ -16,7 +16,7 @@
     <app-loading-indicator *ngIf="loading"></app-loading-indicator>
   
     <!-- Error Message -->
-    <app-error-message *ngIf="error && !loading" (retry)="retryFetch()"></app-error-message>
+    <app-error-message *ngIf="error && !loading" (retryFetch)="retryFetch()"></app-error-message>
   
     <!-- Empty State -->
     <div *ngIf="!loading && !error && blogPosts.length === 0" class="empty-state">
