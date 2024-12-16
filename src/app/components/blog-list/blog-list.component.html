@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="head">
+        <h6 class="badge">Our blog</h6>
+        <h1>Resources and Insights</h1>
+        <h4>The latest industry news, interviews, technologies, and resources.</h4>
+    </div>
+
+    <div class="actions">
+      <div class="input-group">
+        <fa-icon [icon]="faMagnifyingGlass" class="spinner"></fa-icon>
+        <input type="text" class="search" placeholder="Search" />
+      </div>
+    </div>
+  
+    <!-- Loading Indicator -->
+    <app-loading-indicator *ngIf="loading"></app-loading-indicator>
+  
+    <!-- Error Message -->
+    <app-error-message *ngIf="error && !loading" (retry)="retryFetch()"></app-error-message>
+  
+    <!-- Empty State -->
+    <div *ngIf="!loading && !error && blogPosts.length === 0" class="empty-state">
+      <p>No blog posts to display at the moment.</p>
+    </div>
+  
+    <!-- Blog List -->
+    <div class="blog-grid" *ngIf="!loading && !error && blogPosts.length > 0">
+      <app-blog-item *ngFor="let post of blogPosts" [post]="post"></app-blog-item>
+    </div>
+  
+    <!-- Pagination -->
+    <app-pagination
+      [currentPage]="currentPage"
+      (pageChange)="onPageChange($event)"
+    ></app-pagination>
+  </div>
+  

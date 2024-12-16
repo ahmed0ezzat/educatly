@@ -1,0 +1,75 @@
+.container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .head {
+        margin : 40px auto;
+        text-align: center;
+        .badge {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                color: #6941C6;
+                background: #dfd6f2;
+                padding: 8px;
+                margin: auto;
+                border-radius: 16px;
+                width: 82px;
+
+        }
+        h1 {
+                font-weight: 600;
+                font-size: 48px;
+                letter-spacing: -0.02em;
+
+                /* Primary/900 */
+                color: #42307D;
+
+        }
+        h4 {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 30px;
+                /* Primary/700 */
+                color: #6941C6;
+
+        }
+    }
+    .actions {
+        margin-bottom: 90px;
+        .input-group {
+            position: relative;
+            width: max-content;
+            display: block;
+            margin: 10px auto;
+            fa-icon {
+                position: absolute;
+                left: 10px;
+                top: 12px;
+                color: #ddd;
+            }
+            input {
+                border-radius: 15px;
+                width: 320px;
+                height: 40px;
+                border: 1px solid #ddd;
+                padding-left: 30px;
+    
+            }
+        }
+    }
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .empty-state {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
